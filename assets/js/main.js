@@ -27,12 +27,21 @@ for (let i = 0; i < Accesso.length; i++) {
 
 // Genero numero random per giocatore
 const dadiUser = Math.floor(Math.random() * 7)
-console.log(`${dadiUser}`)
+const giocataUser = dadiUser
 
 // Genero numero random per il computer
 const dadiPc = Math.floor(Math.random() * 7)
-console.log(`${dadiPc}`)
+const giocataPc = dadiPc
 
 //Scrivo i rispettivi risultati sulla pagina
 document.getElementById('giocataGiocatore').innerHTML = `${dadiUser}`
 document.getElementById('giocataComputer').innerHTML = `${dadiPc}`
+
+// DICHIARO IL VINCITORE
+if (`${giocataUser} < ${giocataPc}`) {
+    document.getElementById('risultato').innerHTML = 'Hai perso'
+} else if (`${giocataUser} > ${giocataPc}`) {
+    document.getElementById('risultato').innerHTML = 'Hai vinto'
+} else {
+    document.getElementById('risultato').innerHTML = 'Pareggio'
+}
