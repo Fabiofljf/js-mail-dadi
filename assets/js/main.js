@@ -36,30 +36,36 @@ function verifica() {
     }
 }
 
+// GIOCO !!!
 
-// QUARTO PASSAGGIO - Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. 
+//CREO PULSANTE PER GENERARE IL TUTTO
+document.getElementById('btnGioca').addEventListener('click', verificoGioco)
 
-// Genero numero random per giocatore
-const dadiUser = Math.floor(Math.random() * 7)
+function verificoGioco() {
+    // QUARTO PASSAGGIO - Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. 
 
-// VARIABILI DI RICHIAMO (facoltativa)
-const giocataUser = dadiUser
+    // Genero numero random per giocatore
+    const dadiUser = Math.floor(Math.random() * 7)
 
-// Genero numero random per il computer
-const dadiPc = Math.floor(Math.random() * 7)
+    // VARIABILI DI RICHIAMO (facoltativa)
+    const giocataUser = dadiUser
 
-// VARIABILI DI RICHIAMO (facoltativa)
-const giocataPc = dadiPc
+    // Genero numero random per il computer
+    const dadiPc = Math.floor(Math.random() * 7)
 
-//Scrivo i rispettivi risultati sulla pagina
-document.getElementById('giocataGiocatore').innerHTML = `${dadiUser}`
-document.getElementById('giocataComputer').innerHTML = `${dadiPc}`
+    // VARIABILI DI RICHIAMO (facoltativa)
+    const giocataPc = dadiPc
 
-// DICHIARO IL VINCITORE
-if (giocataUser < giocataPc) {
-    document.getElementById('risultato').innerHTML = 'Hai perso'
-} else if (giocataUser > giocataPc) {
-    document.getElementById('risultato').innerHTML = 'Hai vinto'
-} else {
-    document.getElementById('risultato').innerHTML = 'Pareggio'
+    //Scrivo i rispettivi risultati sulla pagina
+    document.getElementById('giocataGiocatore').innerHTML = `${dadiUser}`
+    document.getElementById('giocataComputer').innerHTML = `${dadiPc}`
+
+    // DICHIARO IL VINCITORE
+    if (giocataUser < giocataPc) {
+        document.getElementById('risultato').innerHTML = 'Hai perso'
+    } else if (giocataUser > giocataPc) {
+        document.getElementById('risultato').innerHTML = 'Hai vinto'
+    } else {
+        document.getElementById('risultato').innerHTML = 'Pareggio'
+    }
 }
