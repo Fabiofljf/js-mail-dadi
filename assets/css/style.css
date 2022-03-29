@@ -1,0 +1,28 @@
+/* commons roules */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* utility */
+
+.h_150 {
+    height: 150px;
+}
+
+
+/* HEADER */
+
+.intro {
+    height: 100px;
+}
+
+
+/* MAIN */

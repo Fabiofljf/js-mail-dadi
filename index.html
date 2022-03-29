@@ -18,26 +18,31 @@
 <body>
 
     <header id="site_header">
-        <section class="my-5">
-            <div class="container">
-                <div class="row row-cols-2">
-                    <div class="col">
-                        <h1>Email personale</h1>
-                        <input type="text" id="email" value="">
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-primary" id="btndiVerifica">Verifica</button>
-                        <h2 class="" id="risultatoAccesso"></h2>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="intro bg-dark"></div>
     </header>
     <!-- /#site_header -->
 
     <main id="site_main">
         <section class="my-5">
-            <div class="container">
+            <div class="container bg-primary h_150 rounded">
+                <div class="row row-cols-2">
+                    <div class="col h_150 d-flex flex-column justify-content-around">
+                        <h1 class="text-center">Email personale</h1>
+                        <div class="d-flex justify-content-center">
+                            <input type="text" id="email" value="">
+                        </div>
+                    </div>
+                    <div class="col h_150 d-flex flex-column justify-content-around">
+                        <button type="button" class="btn btn-success" id="btndiVerifica">Verifica</button>
+                        <h2 class="text-center" id="risultatoAccesso"></h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- / EMAIL -->
+
+        <section class="m-3">
+            <div class="container rounded">
                 <row class="row row-cols-2">
                     <div class="col d-flex flex-column justify-content-center align-items-center">
                         <h1 class="text-uppercase text-dark">giocatore 1</h1>
@@ -53,6 +58,7 @@
                 </row>
             </div>
         </section>
+        <!-- / GIOCO -->
     </main>
     <!-- /#site_main -->
 
