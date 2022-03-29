@@ -13,13 +13,22 @@ const email = prompt('Digitare email')
 // VARIABILI DI RICHIAMO
 const nomeUtente = email
 
+//Variabile email non torvata (variabile sentinella) la imposto false perché ancora non ho nessun valore
+let elementoTrovato = false
+
+
 // TERZO PASSAGGIO - Verifico l'accesso
 for (let i = 0; i < Accesso.length; i++) {
-    if (`${nomeUtente} == ${listaAccesso}`) {
-        console.log('utente verificato')
-    } else {
-        console.log('accesso negato')
+    if (nomeUtente == listaAccesso[i]) {
+        elementoTrovato = true
     }
+}
+
+//Quando trovo l'elementoTrovato vero stampo il messaggio
+if (elementoTrovato == true) {
+    console.log('Accesso consentito')
+} else {
+    console.log('Accesso negato')
 }
 
 
@@ -38,9 +47,9 @@ document.getElementById('giocataGiocatore').innerHTML = `${dadiUser}`
 document.getElementById('giocataComputer').innerHTML = `${dadiPc}`
 
 // DICHIARO IL VINCITORE
-if (`${giocataUser} < ${giocataPc}`) {
+if (giocataUser < giocataPc) {
     document.getElementById('risultato').innerHTML = 'Hai perso'
-} else if (`${giocataUser} > ${giocataPc}`) {
+} else if (giocataUser > giocataPc) {
     document.getElementById('risultato').innerHTML = 'Hai vinto'
 } else {
     document.getElementById('risultato').innerHTML = 'Pareggio'
